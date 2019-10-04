@@ -1,17 +1,18 @@
+NAME		= main.out
 INC			= Point.hpp
 CXX			= g++
 CXXFLAGS	= -Wall -Wextra -Werror
 
-all: main
+all: $(NAME)
 	./$<
 
-main: main.cpp Point.o $(INC)
+$(NAME): main.cpp Point.o $(INC)
 	$(CXX) $(CXXFLAGS) $< -o $@ $(word 2, $^)
 
 Point.o: Point.cpp $(INC)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f Point.o main
+	rm -f Point.o $(NAME)
 
 re: clean all

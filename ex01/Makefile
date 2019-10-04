@@ -1,4 +1,4 @@
-NAME		= ex01
+NAME		= ex01.out
 CXX			= g++
 CXXFLAGS	= -Wall -Wextra -Werror
 
