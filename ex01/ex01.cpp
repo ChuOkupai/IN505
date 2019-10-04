@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int		main(void)
 {
 	char	**s;
@@ -12,15 +10,15 @@ int		main(void)
 	p = t;
 	for (i = 0; i < 10; i++)
 	{
-		cout << p[i];
-		cout << ((i < 9) ? ", " : ".\n");
+		std::cout << p[i];
+		std::cout << ((i < 9) ? ", " : ".\n");
 	}
 	s = new char*[3];
 	s[0] = (char*)"truc";
 	s[1] = (char*)"machin";
 	s[2] = (char*)"chose";
 	for (i = 0; i < 3; i++)
-		cout << s[i] << endl;
+		std::cout << s[i] << '\n';
 	delete s;
 	return (0);
 }

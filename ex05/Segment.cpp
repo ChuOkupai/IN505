@@ -2,8 +2,6 @@
 #include <iostream>
 #include "Segment.hpp"
 
-using namespace std;
-
 Segment::Segment() : a(), b()
 {}
 
@@ -21,7 +19,7 @@ Segment::Segment(const Point &a, const Point &b)
 
 Segment::~Segment()
 {
-	cout << "Segment: appel au destructeur" << endl;
+	std::cout << "Segment: appel au destructeur" << '\n';
 }
 
 double	Segment::longueur() const

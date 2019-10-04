@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 void	tableauEcriture(int *t, int size)
 {
 	while (size--)
@@ -15,7 +13,7 @@ void	tableauLecture(const int *t, int size)
 	i = 0;
 	while (i < size)
 	{
-		cout << t[i];
-		cout << ((++i < size) ? ", " : ".\n");
+		std::cout << t[i];
+		std::cout << ((++i < size) ? ", " : ".\n");
 	}
 }

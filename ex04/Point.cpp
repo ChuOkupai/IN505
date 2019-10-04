@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Point.hpp"
 
-using namespace std;
-
 Point::Point() : x(0), y(0)
 {}
 
@@ -14,13 +12,13 @@ Point::Point(double x, double y) : x(x), y(y)
 
 Point::~Point()
 {
-	cout << "Point: appel au destructeur" << endl;
+	std::cout << "Point: appel au destructeur" << '\n';
 }
 
 void	Point::afficher() const
 {
-	cout << "x = " << this->x << endl;
-	cout << "y = " << this->y << endl;
+	std::cout << "x = " << this->x << '\n';
+	std::cout << "y = " << this->y << '\n';
 }
 
 void	Point::cloner(const Point &p)
