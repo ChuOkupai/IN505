@@ -4,22 +4,25 @@
 class CString
 {
 	private:
-		char *s;
+		char		*s;
+		int			taille;
+		static int	n;
 	public:
 		// Constructeurs
 		CString();
 		CString(const char c);
-		CString(const char &*s);
+		CString(const char *s);
 
 		// Destructeur
-		~Segment();
+		~CString();
 
 		// Méthodes
-		char	*getString() const;
-		bool	plusGrandQue() const;
-		bool	infOuEgale() const;
-		CString	plusGrand() const;
-		int		nbrChaines() const;
+		CString		plus(const char c) const;
+		char		*getString() const;
+		bool		plusGrandQue(CString &s) const;
+		bool		infOuEgale(CString &s) const;
+		const CString		plusGrand(CString &s) const;
+		static int	nbrChaines();
 };
 
 #endif
